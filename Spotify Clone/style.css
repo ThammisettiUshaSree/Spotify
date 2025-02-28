@@ -1,0 +1,320 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 20px;
+}
+
+header .logo h1 {
+  font-size: 2rem;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px; /* Adds spacing between the buttons */
+}
+
+.login-btn,
+.signup-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #1db954; /* Spotify green */
+  color: white;
+}
+
+.signup-btn {
+  background-color: #1db954; /* White background for Sign Up */
+  color: #fff !important; /* Green text color for Sign Up */
+  border: 1px solid #1db954; /* Green border */
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  opacity: 0.9; /* Subtle hover effect */
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1db954;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+  vertical-align: top;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #000;
+  width: 240px;
+  height: 100%;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar .logo img {
+  width: 150px;
+}
+
+.sidebar .menu {
+  list-style: none;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.sidebar .menu li {
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.sidebar .menu li:hover {
+  color: #1db954;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 240px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.header input {
+  width: 100%;
+  padding: 10px;
+  background-color: #282828;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+}
+
+/* Playlist Section */
+.playlist {
+  margin-top: 40px;
+}
+
+.playlist h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #1db954;
+}
+
+.playlist-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background-color: #181818;
+  width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.0);
+}
+
+.card img {
+  width: 10rem;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card p {
+  color: #aaa;
+}
+
+.play-icon,
+.pause-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .play-icon,
+.card:hover .pause-icon {
+  opacity: 1;
+}
+
+.play-icon {
+  background-color: #19ad28;
+}
+
+.play-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid rgb(8, 8, 8);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.pause-icon {
+  background-color: rgba(228, 224, 224, 0.7);
+}
+
+.pause-icon::before,
+.pause-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 20px;
+  background-color: rgb(7, 8, 7);
+}
+
+.pause-icon::before {
+  left: 10px;
+}
+
+.pause-icon::after {
+  right: 10px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1a1a1a;
+  padding: 40px 20px;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+footer .footer-column {
+  width: 24%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+footer .footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+footer .footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-column ul li {
+  margin-bottom: 10px;
+}
+
+footer .footer-column ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+footer .footer-column ul li a:hover {
+  color: #1db954;
+}
+
+footer .footer-column h3,
+footer .footer-column ul li a {
+  font-family: 'Arial', sans-serif;
+}
+
+@media (max-width: 768px) {
+  footer .footer-column {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card img {
+    width: 150px;
+    height: 150px;
+  }
+  .card {
+    width: 180px;
+    height: 270px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card img {
+    width: 120px;
+    height: 120px;
+  }
+  .card {
+    width: 160px;
+    height: 240px;
+  }
+}

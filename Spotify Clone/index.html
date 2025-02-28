@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://www.freepnglogos.com/uploads/spotify-logo-png/file-spotify-logo-png-4.png">
+  
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <div class="app">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQlVDRh4dPmXVu9CIF0zwSuUox-OxVO7H9og" alt="Spotify Logo">
+      </div>
+      <ul class="menu">
+        <li>
+          <i class="fa-solid fa-house menu-icon"></i>
+          <span>Home</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-magnifying-glass menu-icon"></i>
+          <span>Search</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-book menu-icon"></i>
+          <span>Your Library</span>
+        </li>
+      </ul>
+    </div>
+    
+    
+    <div class="main-content">
+      <div class="header">
+        <input type="text" placeholder="Search for songs, artists, or podcasts">
+      </div>
+
+
+
+
+
+      <!-- Header -->
+<header>
+  <div class="logo-btn">
+    <h1>Spotify Playlist</h1>
+  </div>
+  <div class="auth-buttons">
+    <button class="login-btn">Login</button>
+    <button class="signup-btn">Sign Up</button>
+  </div>
+</header>
+
+
+      <!-- Popular Artists Section using table -->
+      <div class="cards">
+        <section class="popular-artists">
+          <h2>Popular Artists</h2>
+          <table>
+            <tr>
+              <td>
+                <div class="card">
+                  <img src="images/AR-Rahman.jpg" alt="Artist 1">
+                  <h3>Ar.Rahman</h3>
+                </div>
+              </td>
+              <td>
+                <div class="card">
+                  <img src="images/Arijith Singh.jpg" alt="Artist 2">
+                  <h3>Arjith Singh</h3>
+                </div>
+              </td>
+              <td>
+                <div class="card">
+                  <img src="images/Sid Sriram.jpg" alt="Artist 3">
+                  <h3>Sid Sriram</h3>
+                </div>
+              </td>
+              <td>
+                <div class="card">
+                  <img src="images/SP balasubramanyam.jpg" alt="Artist 4">
+                  <h3>SP balasubramanyam</h3>
+                </div>
+              </td>
+              <td>
+                <div class="card">
+                  <img src="images/Chithra.jpg" alt="Artist 5">
+                  <h3>Chithra</h3>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </section>
+
+
+
+
+
+
+<section class="Recommended">
+  <h2>Recommended for you</h2>
+  <table>
+    <tr>
+      <td>
+        <div class="card">
+          <img src="images/Daavudi.png" alt="Song 1" class="song-image">
+          <h4>Daavudi..</h4>
+          <audio id="audioPlayer1" src="music/Daavudi.mp3" preload="auto"></audio>
+          <i id="playIcon1" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer1', 'playIcon1', 'pauseIcon1')"></i>
+          <i id="pauseIcon1" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer1', 'playIcon1', 'pauseIcon1')" style="display:none;"></i>
+        </div>
+      </td>
+      <td>
+        <div class="card">
+          <img src="images/Hi Nanna.jpg" alt="Song 2" class="song-image">
+          <h4>Ammaadi..</h4>
+          <audio id="audioPlayer2" src="music/Ammaadi.mp3" preload="auto"></audio>
+          <i id="playIcon2" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer2', 'playIcon2', 'pauseIcon2')"></i>
+          <i id="pauseIcon2" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer2', 'playIcon2', 'pauseIcon2')" style="display:none;"></i>
+        </div>
+      </td>
+      <td>
+        <div class="card">
+          <img src="images/Kushi.jpg" alt="Song 3" class="song-image">
+          <h4>Aradhya..</h4>
+          <audio id="audioPlayer3" src="music/Aradhya.mp3" preload="auto"></audio>
+          <i id="playIcon3" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer3', 'playIcon3', 'pauseIcon3')"></i>
+          <i id="pauseIcon3" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer3', 'playIcon3', 'pauseIcon3')" style="display:none;"></i>
+        </div>
+      </td>
+      <td>
+        <div class="card">
+          <img src="images/Pushpa-2.jpg" alt="Song 4" class="song-image">
+          <h5>Kissik..</h5>
+          <audio id="audioPlayer4" src="music/Kissik.mp3" preload="auto"></audio>
+          <i id="playIcon4" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer4', 'playIcon4', 'pauseIcon4')"></i>
+          <i id="pauseIcon4" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer4', 'playIcon4', 'pauseIcon4')" style="display:none;"></i>
+        </div>
+      </td>
+      <td>
+        <div class="card">
+          <img src="images/Game-Changer.jpg" alt="Song 5" class="song-image">
+          <h4>Naanaa Hyraanaa..</h4>
+          <audio id="audioPlayer5" src="music/Naanaa Hyraanaa.mp3" preload="auto"></audio>
+          <i id="playIcon5" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer5', 'playIcon5', 'pauseIcon5')"></i>
+          <i id="pauseIcon5" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer5', 'playIcon5', 'pauseIcon5')" style="display:none;"></i>
+        </div>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<!-- Featured Songs Section - 2nd Row -->
+<section class="Item-Songs">
+  <h2>Item Songs</h2>
+  <table>
+    <tr>
+      <td>
+        <div class="card">
+          <img src="images/guntur-karam.jpeg" alt="Song 1" class="song-image">
+          <h4>Kurchi Madathapetti..</h4>
+          <audio id="audioPlayer6" src="music/Kurchi Madathapetti.mp3" preload="auto"></audio>
+          <i id="playIcon6" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer6', 'playIcon6', 'pauseIcon6')"></i>
+          <i id="pauseIcon6" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer6', 'playIcon6', 'pauseIcon6')" style="display:none;"></i>
+        </div>
+      </td>
+      <td>
+        <div class="card">
+          <img src="images/pushpa.jpg" alt="Song 2" class="song-image">
+          <h4>Oo Antava Oo Oo Antava..</h4>
+          <audio id="audioPlayer7" src="music/Oo Antava Oo Oo Antava.mp3" preload="auto"></audio>
+          <i id="playIcon7" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer7', 'playIcon7', 'pauseIcon7')"></i>
+          <i id="pauseIcon7" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer7', 'playIcon7', 'pauseIcon7')" style="display:none;"></i>
+        </div>
+      </td>
+      <td>
+        <div class="card">
+          <img src="images/Akhanda.jpeg" alt="Song 3" class="song-image">
+          <h4>Jai Balayya..</h4>
+          <audio id="audioPlayer8" src="music/3.Jai Balayya.mp3" preload="auto"></audio>
+          <i id="playIcon8" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer8', 'playIcon8', 'pauseIcon8')"></i>
+          <i id="pauseIcon8" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer8', 'playIcon8', 'pauseIcon8')" style="display:none;"></i>
+        </div>
+      </td>
+      <td>
+        <div class="card">
+          <img src="images/Jathi-Ratnalu.jpg" alt="Song 4" class="song-image">
+          <h4>Jathi-Ratnalu..</h4>
+          <audio id="audioPlayer9" src="music/Chitti - SenSongsMp3.Com.mp3" preload="auto"></audio>
+          <i id="playIcon9" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer9', 'playIcon9', 'pauseIcon9')"></i>
+          <i id="pauseIcon9" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer9', 'playIcon9', 'pauseIcon9')" style="display:none;"></i>
+        </div>
+      </td>
+      <td>
+        <div class="card">
+          <img src="images/Lucky-Baskhar.jpg" alt="Song 5" class="song-image">
+          <h4>Lucky-Baskhar..</h4>
+          <audio id="audioPlayer10" src="music/Srimathi Garu.mp3" preload="auto"></audio>
+          <i id="playIcon10" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer10', 'playIcon10', 'pauseIcon10')"></i>
+          <i id="pauseIcon10" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer10', 'playIcon10', 'pauseIcon10')" style="display:none;"></i>
+        </div>
+      </td>
+    </tr>
+  </table>
+</section>
+
+
+
+<section class="featured-songs">
+    <h2>Featured Songs</h2>
+    <table>
+      <tr>
+        <td>
+          <div class="card">
+            <img src="images/Daaku-Maharaaj.jpg" alt="Song 1" class="song-image">
+            <h4>Daaku-Maharaaj.</h4>
+            <audio id="audioPlayer11" src="music/Chinni.mp3" preload="auto"></audio>
+            <i id="playIcon11" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer11', 'playIcon11', 'pauseIcon11')"></i>
+            <i id="pauseIcon11" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer11', 'playIcon11', 'pauseIcon11')" style="display:none;"></i>
+          </div>
+        </td>
+        <td>
+          <div class="card">
+            <img src="images/mca.jpg" alt="Song 2" class="song-image">
+            <h4>Mca..</h4>
+            <audio id="audioPlayer12" src="music/Yemaindho Teliyadu Naaku - SenSongsMp3.Co.mp3" preload="auto"></audio>
+            <i id="playIcon12" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer12', 'playIcon12', 'pauseIcon12')"></i>
+            <i id="pauseIcon12" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer12', 'playIcon12', 'pauseIcon12')" style="display:none;"></i>
+          </div>
+        </td>
+        <td>
+          <div class="card">
+            <img src="images/rx-100.jpg" alt="Song 3" class="song-image">
+            <h4>RX 100..</h4>
+            <audio id="audioPlayer13" src="music/Pillaa Raa - SenSongsMp3.Co.mp3" preload="auto"></audio>
+            <i id="playIcon13" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer13', 'playIcon13', 'pauseIcon13')"></i>
+            <i id="pauseIcon13" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer13', 'playIcon13', 'pauseIcon13')" style="display:none;"></i>
+          </div>
+        </td>
+        <td>
+          <div class="card">
+            <img src="images/Geetha-Govindham.jpg" alt="Song 4" class="song-image">
+            <h4>Geetha-Govindham..</h4>
+            <audio id="audioPlayer14" src="music/Yenti Yenti - SenSongsMp3.Co.mp3" preload="auto"></audio>
+            <i id="playIcon14" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer14', 'playIcon14', 'pauseIcon14')"></i>
+            <i id="pauseIcon14" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer14', 'playIcon14', 'pauseIcon14')" style="display:none;"></i>
+          </div>
+        </td>
+        <td>
+          <div class="card">
+            <img src="images/miles of love.jpg" alt="Song 5" class="song-image">
+            <h4>Teliyade..</h4>
+            <audio id="audioPlayer15" src="music/Teliyade Teliyade - SenSongsMp3.Com.mp3" preload="auto"></audio>
+            <i id="playIcon15" class="fa fa-play play-icon" onclick="togglePlayPause('audioPlayer15', 'playIcon15', 'pauseIcon15')"></i>
+            <i id="pauseIcon15" class="fa fa-pause pause-icon" onclick="togglePlayPause('audioPlayer15', 'playIcon15', 'pauseIcon15')" style="display:none;"></i>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </section>
+</div>
+</div>
+
+
+
+
+  <script>
+    //function playSong(playerId) {
+    //   // Get the audio player element by ID
+    //   const audioPlayer = document.getElementById(playerId);
+      
+    //   // If the audio is paused, play it, else pause it
+    //   if (audioPlayer.paused) {
+    //     audioPlayer.play();
+    //   } else {
+    //     audioPlayer.pause();
+    //   }
+    // }
+
+
+    function togglePlayPause(audioId, playBtnId) {
+    var audioPlayer = document.getElementById(audioId);
+    var playBtn = document.getElementById(playBtnId);
+    var pauseBtn = document.getElementById('pauseBtn' + playBtnId.charAt(playBtnId.length - 1)); // Get the corresponding pause button
+
+    // If the audio is paused, play it and show the pause button
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+      playBtn.style.display = "none"; // Hide Play button
+      pauseBtn.style.display = "inline-block"; // Show Pause button
+    } else {
+      audioPlayer.pause();
+      playBtn.style.display = "inline-block"; // Show Play button
+      pauseBtn.style.display = "none"; // Hide Pause button
+    }
+  }
+  </script>
+
+
+
+
+
+<footer>
+  <div class="footer-content">
+    <!-- Footer Logo Section -->
+    <div class="footer-column logo">
+      <img src="your-logo.png" alt="Spotify Logo" />
+      <p>Music for everyo</p>
+    </div>
+
+    <!-- Footer Links Section -->
+    <div class="footer-column">
+      <h3>About</h3>
+      <ul>
+        <li><a href="#">Company Info</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Footer Help Section -->
+    <div class="footer-column">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Free Mobile App</a></li>
+        <li><a href="#">Spotify Community</a></li>
+      </ul>
+    </div>
+
+    <!-- Footer Legal Section -->
+    <div class="footer-column">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+
+    <!-- Footer Social Media Section -->
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 YourCompany. All Rights Reserved.</p>
+  </div>
+  <div class="footer-content">
+    
+</footer>
+
+<script src="script.js"></script> <!-- Fixed the src attribute for the JS file -->
+  
+</body>
+</html>
